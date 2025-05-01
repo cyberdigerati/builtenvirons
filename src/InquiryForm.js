@@ -24,22 +24,12 @@ function InquiryForm() {
     setError('');
 
     try {
-      // Add Web3Forms access key
-      const formDataWithKey = {
-        ...formData,
-        access_key: '2aa7c07f-2fd3-407a-b584-4b60db567c3f',
-        subject: `Domain Inquiry: BuiltEnvirons.com - Qualfied Interest`,
-        from_name: 'BuiltEnvirons.com Form',
-        to_email: 'builtenvirons.com@proton.me',
-      };
-
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/submit-inquiry', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Accept: 'application/json',
         },
-        body: JSON.stringify(formDataWithKey),
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
@@ -51,7 +41,7 @@ function InquiryForm() {
       }
     } catch (err) {
       setError(
-        'There was a problem submitting your inquiry. Please try again or email us directly at builtenvirons.com@proton.me'
+        'There was a problem submitting your inquiry. Please try again or email us directly at builtenvirons@proton.me'
       );
       console.error(err);
     } finally {
