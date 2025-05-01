@@ -37,7 +37,7 @@ export default async function handler(req, res) {
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'environmentaldesign.com@proton.me',
+      to: 'builtenvirons.com@proton.me',
       subject: `Domain Inquiry from ${name}`,
       text: `
 Name: ${name}
@@ -47,7 +47,7 @@ Company: ${company || 'Not provided'}
 Message:
 ${message}
 
-This inquiry was sent from environmentaldesign.com
+This inquiry was sent from builtenvirons.com
       `,
       html: `
 <h2>New Domain Inquiry</h2>
@@ -57,7 +57,7 @@ This inquiry was sent from environmentaldesign.com
 <p><strong>Message:</strong></p>
 <p>${message.replace(/\n/g, '<br>')}</p>
 <hr>
-<p><em>This inquiry was sent from environmentaldesign.com</em></p>
+<p><em>This inquiry was sent from builtenvirons.com</em></p>
       `,
     };
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import InquiryForm from './InquiryForm';
 import PrivacyPolicy from './PrivacyPolicy';
-import { Analytics } from '@vercel/analytics/react'; // Added this import
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [showInquiryForm, setShowInquiryForm] = useState(false);
@@ -22,21 +22,24 @@ function App() {
           <div className="mb-8">
             <img
               src="/logo.png"
-              alt="Environmental Design"
+              alt="BuiltEnvirons"
               className="mx-auto w-40 h-auto mb-4"
             />
             <h2 className="text-2xl md:text-3xl text-gray-200 font-light tracking-wide">
-              ENVIRONMENTALDESIGN.COM
+              BUILTENVIRONS.COM
             </h2>
           </div>
           <h1 className="text-5xl md:text-7xl font-light text-white mb-6">
-            Where Environment Meets Intelligence
+            The Nexus Between Built & Natural Environments
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-6 max-w-3xl mx-auto font-light">
-            This is not just a domain. It's a movement waiting to be ignited.
+            This is not just a domain. it is a digital foundation for the next
+            era of sustainable design, smart cities, and regenerative
+            infrastructure.
           </p>
           <p className="text-2xl md:text-3xl text-green-300 mb-10 font-light">
-            $2,500,000
+            Available Exclusively by Private Negotiation - Inquiries Accepted
+            from Verified Entities by Private Invitation
           </p>
           {showInquiryForm ? (
             <div className="w-full max-w-xl mx-auto px-4">
@@ -70,21 +73,23 @@ function App() {
                 description: 'Buildings that heal the earth.',
               },
               {
-                title: 'Academic Vanguard',
+                title: 'Built Innovation',
                 description:
-                  "A hub for tomorrow's leaders in sustainable design.",
+                  'Where construction meets cutting-edge technology.',
               },
               {
-                title: 'Climate Capital',
-                description: 'Where money meets meaning.',
+                title: 'Infrastructure Intelligence',
+                description:
+                  'Elevating physical systems with digital innovation.',
               },
               {
-                title: 'AI + Ecology',
-                description: 'A neural network for the natural world.',
+                title: 'Urban Analytics',
+                description: "Data-driven solutions for tomorrow's cities.",
               },
               {
-                title: 'Design Revolution',
-                description: 'Reimagining our relationship with the planet.',
+                title: 'Spatial Design',
+                description:
+                  'Creating environments that enhance human experience.',
               },
             ].map((item, index) => (
               <div
@@ -104,36 +109,37 @@ function App() {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl text-gray-800 text-center mb-16 font-light">
-            Why EnvironmentalDesign.com?
+            Why BuiltEnvirons.com?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
             <div className="p-6">
               <h3 className="text-xl text-green-800 mb-3">The Domain</h3>
               <p className="text-gray-700">
-                100% premium, dictionary-grade, brandable
+                100% premium, dictionary-grade, instantly memorable
               </p>
             </div>
 
             <div className="p-6">
               <h3 className="text-xl text-green-800 mb-3">The Opportunity</h3>
               <p className="text-gray-700">
-                Own the narrative, define the space, lead the movement
+                Define the future of built spaces, lead the industry
+                transformation
               </p>
             </div>
 
             <div className="p-6">
               <h3 className="text-xl text-green-800 mb-3">The Audience</h3>
               <p className="text-gray-700">
-                From academia to enterprise, a global convergence
+                From architects and developers to tech innovators and smart city
+                planners
               </p>
             </div>
 
             <div className="p-6">
               <h3 className="text-xl text-green-800 mb-3">The Future</h3>
               <p className="text-gray-700">
-                A singular address for the entire environmental design
-                revolution
+                The digital headquarters for the built environment revolution
               </p>
             </div>
           </div>
@@ -153,7 +159,7 @@ function App() {
           </p>
 
           <div className="mt-12 text-sm">
-            <p>© 2025 EnvironmentalDesign.com</p>
+            <p>© 2025 BuiltEnvirons.com</p>
             <div className="mt-6 text-xs">
               <button
                 onClick={() => setShowPrivacyPolicy(true)}
@@ -169,7 +175,7 @@ function App() {
       {showPrivacyPolicy && (
         <PrivacyPolicy onClose={() => setShowPrivacyPolicy(false)} />
       )}
-      <Analytics /> {/* Added this line */}
+      <Analytics />
     </div>
   );
 }

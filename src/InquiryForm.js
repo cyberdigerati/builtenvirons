@@ -28,9 +28,9 @@ function InquiryForm() {
       const formDataWithKey = {
         ...formData,
         access_key: '2aa7c07f-2fd3-407a-b584-4b60db567c3f',
-        subject: `Domain Inquiry: EnvironmentalDesign.com - $2,500,000`,
-        from_name: 'EnvironmentalDesign.com Form',
-        to_email: 'environmentaldesign.com@proton.me',
+        subject: `Domain Inquiry: BuiltEnvirons.com - Qualfied Interest`,
+        from_name: 'BuiltEnvirons.com Form',
+        to_email: 'builtenvirons.com@proton.me',
       };
 
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -51,7 +51,7 @@ function InquiryForm() {
       }
     } catch (err) {
       setError(
-        'There was a problem submitting your inquiry. Please try again or email us directly at environmentaldesign.com@proton.me'
+        'There was a problem submitting your inquiry. Please try again or email us directly at builtenvirons.com@proton.me'
       );
       console.error(err);
     } finally {
@@ -65,7 +65,7 @@ function InquiryForm() {
         <h3 className="text-2xl text-white mb-4">Thank You</h3>
         <p className="text-gray-200">
           Your inquiry has been received. We'll be in touch shortly regarding
-          the acquisition of EnvironmentalDesign.com.
+          the acquisition of BuiltEnvirons.com.
         </p>
       </div>
     );

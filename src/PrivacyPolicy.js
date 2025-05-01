@@ -37,9 +37,9 @@ function PrivacyPolicy({ onClose }) {
           <p>
             The information you provide is used solely for the purpose of
             responding to your inquiry about the acquisition of
-            EnvironmentalDesign.com. We do not use this information for
-            marketing purposes or share it with third parties except as
-            necessary to process your inquiry.
+            BuiltEnvirons.com. We do not use this information for marketing
+            purposes or share it with third parties except as necessary to
+            process your inquiry.
           </p>
 
           <h3 className="text-lg font-medium mt-4">
@@ -56,13 +56,13 @@ function PrivacyPolicy({ onClose }) {
           <p>
             You have the right to request access to, correction of, or deletion
             of your personal information. To exercise these rights, please
-            contact us at environmentaldesign.com@proton.me.
+            contact us at builtenvirons.com@proton.me.
           </p>
 
           <h3 className="text-lg font-medium mt-4">5. Contact Us</h3>
           <p>
             If you have any questions about this Privacy Policy, please contact
-            us at environmentaldesign.com@proton.me.
+            us at builtenvirons.com@proton.me.
           </p>
         </div>
       </div>
