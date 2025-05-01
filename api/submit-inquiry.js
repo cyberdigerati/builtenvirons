@@ -16,7 +16,7 @@ module.exports = async function handler(req, res) {
     }
 
     // Get access key from environment variable
-    const accessKey = process.env.WEB3FORMS_BE_ACCESS_KEY;
+    const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
     console.log('API key exists:', !!accessKey);
 
     if (!accessKey) {
