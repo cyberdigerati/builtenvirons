@@ -37,7 +37,7 @@ export default async function handler(req, res) {
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'builtenvirons.com@proton.me',
+      to: 'builtenvirons@proton.me',
       subject: `Domain Inquiry from ${name}`,
       text: `
 Name: ${name}
