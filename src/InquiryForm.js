@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 
 function InquiryForm() {
+  const WEB3FORMS_ACCESS_KEY = '69ac0019-f956-4905-a6d5-ec19fe20146a'; // BuiltEnvirons form key
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     message: '',
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -24,24 +27,35 @@ function InquiryForm() {
     setError('');
 
     try {
-      const response = await fetch('/api/submit-inquiry', {
+      const payload = {
+        access_key: WEB3FORMS_ACCESS_KEY,
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        message: formData.message,
+        subject: 'Domain Inquiry: BuiltEnvirons.com - Qualified Inquiry',
+        from_name: 'BuiltEnvirons.com Form',
+      };
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (response.ok && data.success) {
         setIsSubmitted(true);
       } else {
-        throw new Error(data.message || 'Something went wrong');
+        throw new Error(data.message || 'Form submission failed');
       }
     } catch (err) {
       setError(
-        'There was a problem submitting your inquiry. Please try again or email us directly at builtenvirons@proton.me'
+        'There was a problem submitting your inquiry. Please try again or email us directly at webdevtoolkit@proton.me'
       );
       console.error(err);
     } finally {
